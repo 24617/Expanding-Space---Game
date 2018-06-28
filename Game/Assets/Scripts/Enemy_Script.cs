@@ -47,7 +47,7 @@ public class Enemy_Script : MonoBehaviour {
             AnimatorEnemy.SetInteger("Stage", 4);
             EnemyAlive = false;
             Deathtimer += 1;
-            if (Deathtimer == 200)
+            if (Deathtimer == 400)
             {
                 Destroy(gameObject);
             }

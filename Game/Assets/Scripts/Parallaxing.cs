@@ -16,7 +16,7 @@ public class Parallaxing : MonoBehaviour {
         parallaxScales = new float[Backgrounds.Length];
         for (int i = 0; i < parallaxScales.Length; i++)
         {
-            parallaxScales[i] = Backgrounds[i].position.z * 0.01F;
+            parallaxScales[i] = Backgrounds[i].position.z * 0.01F -5;
         }
     }
 	

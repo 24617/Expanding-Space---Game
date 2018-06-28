@@ -5,7 +5,7 @@ AnimationClip:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Bullet_Green
+  m_Name: Bullet_Green_NewAnimation
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,21 +20,21 @@ AnimationClip:
   - curve:
     - time: 0
       value: {fileID: 21300000, guid: 98900a484cd2fde4eaf68f71845f136c, type: 3}
-    - time: 0.083333336
+    - time: 0.02
       value: {fileID: 21300000, guid: 661ecb7ca63aa8e47afcdb0c12a57e3f, type: 3}
-    - time: 0.16666667
+    - time: 0.04
       value: {fileID: 21300000, guid: b19d4135e7707764082556f4f742b454, type: 3}
-    - time: 0.25
+    - time: 0.06
       value: {fileID: 21300000, guid: de8a9d89e3b01f645addee5166a86e94, type: 3}
-    - time: 0.33333334
+    - time: 0.08
       value: {fileID: 21300000, guid: adbfba84cb5c5b843963e951f863df12, type: 3}
-    - time: 0.41666666
-      value: {fileID: 21300000, guid: 661ecb7ca63aa8e47afcdb0c12a57e3f, type: 3}
+    - time: 0.1
+      value: {fileID: 21300000, guid: d30ba38a8e2f73249ae3f5d7bbe7549f, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-  m_SampleRate: 12
+  m_SampleRate: 100
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -54,13 +54,13 @@ AnimationClip:
     - {fileID: 21300000, guid: b19d4135e7707764082556f4f742b454, type: 3}
     - {fileID: 21300000, guid: de8a9d89e3b01f645addee5166a86e94, type: 3}
     - {fileID: 21300000, guid: adbfba84cb5c5b843963e951f863df12, type: 3}
-    - {fileID: 21300000, guid: 661ecb7ca63aa8e47afcdb0c12a57e3f, type: 3}
+    - {fileID: 21300000, guid: d30ba38a8e2f73249ae3f5d7bbe7549f, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5
+    m_StopTime: 0.11
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
