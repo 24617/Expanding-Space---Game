@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 public class Quest : MonoBehaviour
 {
     public AudioSource CollectSound;
-
-
+    public Transform Particle_Pickup;
+    public Transform Second_Particle_Pickup;
+    public Transform ItemFrame;
 
 
     void Start()
     {
-        
+
     }
 
 
@@ -20,7 +21,7 @@ public class Quest : MonoBehaviour
     {
 
         //Quest 1
-        if (Input.GetKeyDown("p") && (Quest1 == true))
+        if (Input.GetKeyDown("o") && (Quest1 == true))
         {
             if (Pickable1 == 0)
             {
@@ -38,7 +39,7 @@ public class Quest : MonoBehaviour
         }
     }
 
-    public bool Quest1 = true;
+    public bool Quest1 = false;
     public int Pickable1 = 0;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -53,12 +54,20 @@ public class Quest : MonoBehaviour
         {
             Pickable1 = 1;
             Destroy(collision.gameObject);
+            Instantiate(Particle_Pickup, collision.transform.position, Quaternion.identity);
+            Instantiate(Second_Particle_Pickup, ItemFrame.transform.position, Quaternion.identity, ItemFrame.transform.parent);
             CollectSound.Play();
         }
-        if (collision.gameObject.tag == "Ending" && Pickable1 == 2)
+
+        if (Input.GetKey("o"))
         {
-            SceneManager.LoadScene("`Loading");
+            if (collision.gameObject.tag == "Ending" && Pickable1 == 2)
+            {
+                SceneManager.LoadScene("Loading");
+            }
         }
+
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)

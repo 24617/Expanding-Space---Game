@@ -18,7 +18,7 @@ public class Enemy_Shoot : MonoBehaviour {
         transform.Translate(bulletspeed, 0, 0);
 
         timer += Time.deltaTime;
-        if (timer >= 1)
+        if (timer >= 0.5)
         {
             Destroy(gameObject);
         }

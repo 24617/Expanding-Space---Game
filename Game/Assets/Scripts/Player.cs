@@ -7,11 +7,13 @@ public class Player : MonoBehaviour
     Animator anim;
     private Animator animator;
     private SpriteRenderer spriteRenderer;
-    
+
 
     public Rigidbody2D rb;
     public AudioSource JumpSound;
     public AudioSource ShootSound;
+
+    public Transform PlayerShootingParticle;
 
     public GameObject ShootingSpotRight;
     public GameObject ShootingSpotLeft;
@@ -40,6 +42,7 @@ public class Player : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         animator = GetComponent<Animator>();
         anim = GetComponent<Animator>();
+        
 
     }
     
@@ -103,6 +106,7 @@ public class Player : MonoBehaviour
             }
 
 
+      
             //jump
             if (isshooting == false)
             {
@@ -119,11 +123,12 @@ public class Player : MonoBehaviour
 
 
             //shoot
-            if (Input.GetKeyDown(KeyCode.B) && nextFire == 0)
+            if (Input.GetKeyDown(KeyCode.P) && nextFire == 0)
             {
                 iJustShot = true;
                 isshooting = true;
                 anim.SetInteger("State", 3);
+                
 
 
             }
@@ -143,16 +148,20 @@ public class Player : MonoBehaviour
                 }
                 if (nextFire == 40)
                 {
+                    
                     ShootSound.Play();
                     if (spriteRenderer.flipX == false)
                     {
                         Quaternion spawnpoint = new Quaternion(0, 0, 180, 0);
+                        Instantiate(PlayerShootingParticle, this.transform.position, new Quaternion(0, 0, 0, 0));
                         Instantiate(shot, ShootingSpotLeft.transform.position, spawnpoint);
                     }
                     if (spriteRenderer.flipX == true)
                     {
                         Quaternion spawnpoint = new Quaternion(0, 0, 0, 0);
+                        Instantiate(PlayerShootingParticle, this.transform.position, new Quaternion(0, 180, 0, 0));
                         Instantiate(shot, ShootingSpotRight.transform.position, spawnpoint);
+                        
                     }
                 }
             }
