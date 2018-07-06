@@ -12,7 +12,7 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+
 
         transform.Translate(bulletspeed, 0, 0);
 
@@ -22,6 +22,9 @@ public class Shoot : MonoBehaviour
             Destroy(gameObject);
         }
 
+
     }
-   
+
+
+    
 }

@@ -33,5 +33,10 @@ public class Enemy_Shoot : MonoBehaviour {
             Destroy(gameObject);
         }
 
+        if (other.gameObject.tag == "Wall")
+        {
+            Destroy(gameObject);
+        }
+
     }
 }

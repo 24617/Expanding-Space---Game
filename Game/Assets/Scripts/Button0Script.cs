@@ -9,11 +9,6 @@ public class Button0Script : MonoBehaviour {
 
     public UnityAction test;
 
-	// Use this for initialization
-	void Awake () {
-        //gameObject.GetComponent<Button>().onClick.AddListener(KlikMij);
-
-    }
 	// Update is called once per frame
 	void Update () {
 
@@ -32,6 +27,12 @@ public class Button0Script : MonoBehaviour {
     {
         SceneManager.LoadScene("Lvl_3");
     }
+
+    public void Button3()
+    {
+  
+    }
+
 
     public delegate void MyDelegate (bool bla, string id);
 

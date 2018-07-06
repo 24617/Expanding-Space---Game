@@ -102,13 +102,13 @@ public class Enemy_Script : MonoBehaviour {
                     if (spriteRenderer.flipX == false)
                     {
                         Quaternion spawnpoint = new Quaternion(0, 0, 180, 1);
-                        Instantiate(EnemyShootingParticle, this.transform.position, new Quaternion(0, 0, 0, 0));
+                        Instantiate(EnemyShootingParticle, new Vector3(this.transform.position.x - 0.9f, this.transform.position.y + 0.2f, this.transform.position.z), new Quaternion(0, 180, 0, 0));
                         Instantiate(shot, ShootingSpotRightEnemy.transform.position, spawnpoint);
                     }
                     if (spriteRenderer.flipX == true)
                     {
                         Quaternion spawnpoint = new Quaternion(0, 0, 0, 1);
-                        Instantiate(EnemyShootingParticle, this.transform.position, new Quaternion(0, 180, 0, 0));
+                        Instantiate(EnemyShootingParticle, new Vector3(this.transform.position.x + 0.9f, this.transform.position.y +0.2f, this.transform.position.z), new Quaternion(0, 0, 0, 0));
                         Instantiate(shot, ShootingSpotLeftEnemy.transform.position, spawnpoint);
                     }
                 }

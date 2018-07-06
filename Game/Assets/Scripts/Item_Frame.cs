@@ -18,12 +18,12 @@ public class Item_Frame : MonoBehaviour {
 	void Update () {
          
 
-        if (item.Pickable1 == 1)
+        if (item.Pickable1 == 3)
         {
             gameObject.GetComponent<Renderer>().enabled = true;
         }
 
-        if (item.Pickable1 == 2)
+        if (item.Pickable1 == 4)
         {
             gameObject.GetComponent<Renderer>().enabled = false;
         }
